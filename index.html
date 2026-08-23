@@ -612,7 +612,7 @@
             <div class="field full"><label for="b-msg">What would you like clarity on?</label><textarea id="b-msg"></textarea></div>
           </div>
          <div class="field full" style="margin-top:22px;">
-  <label style="display:flex; flex-direction:row; align-items:flex-start; gap:10px; text-transform:none; letter-spacing:0; line-height:1.5; cursor:pointer;">
+ <label style="display:flex; flex-direction:row; align-items:flex-start; gap:10px; text-transform:none; letter-spacing:0; line-height:1.5; cursor:pointer;">
     <input type="checkbox" id="b-acknowledgement" required style="width:auto; margin-top:4px;">
     <span>
       As I submit this form, I understand that this consultation is intended for self-awareness and personal guidance. My participation and decisions remain my own responsibility.
@@ -761,6 +761,14 @@
     if(!form) return;
     form.addEventListener('submit', function(e){
       e.preventDefault();
+      if (formId === 'booking-form') {
+  const acknowledgement = document.getElementById('b-acknowledgement');
+
+  if (!acknowledgement || !acknowledgement.checked) {
+    alert('Please confirm the acknowledgement before booking your session.');
+    return;
+  }
+}
       let body = '';
       fieldMap.forEach(([label, id]) => { body += label + ': ' + fieldVal(id) + '\n'; });
       const mailto = 'mailto:connect@patternsandpurpose.in'
