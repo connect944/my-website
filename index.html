@@ -580,7 +580,7 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Booking</p>
-        <h2>Book a Session.</h2>
+        <h2>Book an Online Session.</h2>
         <p class="lede">Share your birth details and the area you'd like clarity on. We'll confirm your On line slot once the advance payment is received.</p>
       </div>
       <div class="booking-grid">
@@ -602,6 +602,14 @@
             <div class="field"><label for="b-pob">Place of birth</label><input id="b-pob" type="text"></div>
             <div class="field"><label for="b-slot">Preferred session time</label><input id="b-slot" type="text" placeholder="e.g. Weekday evenings, IST"></div>
             <div class="field full"><label for="b-msg">What would you like clarity on?</label><textarea id="b-msg"></textarea></div>
+            <div class="field full">
+  <label for="b-birthtime-certain">Are you certain about your time of birth?</label>
+  <select id="b-birthtime-certain">
+    <option value="" selected disabled>Please select</option>
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+</div>
           </div>
           <div class="form-foot">
             <button type="submit" class="btn-primary">Book my Session.</button>
