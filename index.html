@@ -188,11 +188,43 @@
   .offer-card.hero-offer .price small{color:rgba(244,248,249,0.55);}
 
 /* ---- about rubina ---- */
-.about-rubina-grid{
+
+.about-rubina-top{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:380px 1fr;
   gap:70px;
   align-items:start;
+}
+
+.about-rubina-photo{
+  text-align:center;
+}
+
+.about-rubina-photo img{
+  display:block;
+  width:100%;
+  max-width:380px;
+  height:auto;
+  margin:0 auto;
+}
+
+.about-rubina-caption{
+  margin-top:16px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:0.72rem;
+  font-weight:600;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--navy-2);
+  line-height:1.6;
+}
+
+.about-rubina-caption span{
+  font-size:0.62rem;
+  font-weight:400;
+  letter-spacing:0.08em;
+  text-transform:none;
+  color:var(--ink-soft);
 }
 
 .about-rubina-intro h3{
@@ -219,10 +251,18 @@
   margin-top:0 !important;
 }
 
+.about-rubina-story{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  margin-top:65px;
+  padding-top:50px;
+  border-top:1px solid rgba(15,26,61,0.12);
+}
+
 .about-rubina-quote{
   border-left:2px solid var(--gold);
   padding:8px 0 8px 28px;
-  margin-bottom:28px;
 }
 
 .about-rubina-quote span{
@@ -241,11 +281,33 @@
   margin-top:4px;
 }
 
+.about-rubina-detail p:first-child{
+  margin-top:0;
+}
+
 @media (max-width:760px){
-  .about-rubina-grid{
+
+  .about-rubina-top{
     grid-template-columns:1fr;
     gap:38px;
   }
+
+  .about-rubina-photo{
+    max-width:360px;
+    margin:0 auto;
+  }
+
+  .about-rubina-story{
+    grid-template-columns:1fr;
+    gap:38px;
+    margin-top:45px;
+    padding-top:38px;
+  }
+
+  .about-rubina-quote p{
+    font-size:1.2rem;
+  }
+
 }
   
   /* ---- testimonials ---- */
@@ -496,7 +558,7 @@
   <div class="wrap">
 
     <div class="section-head">
-      <p class="eyebrow">About Rubina</p>
+      <p class="eyebrow">Meet Rubina</p>
       <h2>The person behind the chart.</h2>
       <p class="lede">
         “Your chart may reveal your tendencies.
@@ -504,7 +566,17 @@
       </p>
     </div>
 
-    <div class="about-rubina-grid">
+    <div class="about-rubina-top">
+
+      <div class="about-rubina-photo">
+        <img
+          src="Rubina-.png"
+          alt="Rubina, founder of Patterns &amp; Purpose">
+        <p class="about-rubina-caption">
+          RUBINA<br>
+          <span>Vedic Astrology Practitioner · Founder, Patterns &amp; Purpose</span>
+        </p>
+      </div>
 
       <div class="about-rubina-intro">
         <p class="about-rubina-label">PATTERNS &amp; PURPOSE</p>
@@ -538,18 +610,21 @@
         </p>
       </div>
 
+    </div>
+
+    <div class="about-rubina-story">
+
+      <div class="about-rubina-quote">
+        <span>“</span>
+        <p>
+          Every life has a pattern,<br>
+          every pattern has a purpose,<br>
+          and every purpose unfolds<br>
+          in its own time.
+        </p>
+      </div>
 
       <div class="about-rubina-detail">
-
-        <div class="about-rubina-quote">
-          <span>“</span>
-          <p>
-            Every life has a pattern,
-            every pattern has a purpose,
-            and every purpose unfolds
-            in its own time.
-          </p>
-        </div>
 
         <p>
           Through the Patterns and Purpose Method™, Rubina guides people
